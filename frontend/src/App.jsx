@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -9,9 +6,9 @@ function App() {
 
   return (
     <>
-      <div>
-        <button className='btn btn-dark'>Click Me !</button>
-      </div>
+    <div>
+      This is a home page
+    </div>
     </>
   )
 }
