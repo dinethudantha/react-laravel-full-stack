@@ -11,6 +11,9 @@ function App() {
 
     return (
         <>
+
+            {/* Header Section */}
+
             <header>
                 <Navbar expand="lg" className="py-4 me-auto">
                     <Container>
@@ -46,10 +49,15 @@ function App() {
                     </Container>
                 </Navbar>
             </header>
+
+
             <main>
+
+                {/* Hero Section */}
+
                 <div
                     id="hero"
-                    className="d-flex align-items-center justify-content-center"
+                    className="d-flex align-items-center justify-content-center section-1"
                 >
                     <div className="text-center text-white">
                         <span style={{ fontSize: "1.5rem", color: "#ffb703" }}>
@@ -77,6 +85,7 @@ function App() {
                         </div>
                     </div>
                 </div>
+
             </main>
         </>
     );
