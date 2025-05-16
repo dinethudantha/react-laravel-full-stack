@@ -3,11 +3,18 @@
 $primary-color: #fe538d;
 $secondary-color: #ffb703;
 $text-color: #000;
+$bg-light: #f8f9fb;
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 body {
     font-family: "Rubik", sans-serif;
+}
+
+// Custom Background Colors
+
+.bg-light {
+    background-color: $bg-light;
 }
 
 // default text sizes
@@ -17,7 +24,43 @@ h1 {
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+// Default items
+
+.btn-primary {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+}
+
+.btn-secondary {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
 }
 
 #logo {
@@ -37,6 +80,22 @@ h2 {
     font-weight: 500;
 }
 
+.section-header {
+    .section-sub-heading {
+        color: $primary-color;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+// Section 1 css
 
 .section-1 {
     width: 100%;
@@ -44,30 +103,74 @@ h2 {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
         url("../images/hero.jpg");
     background-size: cover;
+}
 
-    .btn-primary {
-        background-color: $primary-color;
-        border: 1px solid $primary-color;
-        font-size: 1em;
-        font-weight: 500;
-        text-transform: uppercase;
+// Section 2 css
 
-        &:hover {
-            background-color: $secondary-color;
-            border: 1px solid $secondary-color;
+.section-2 {
+    img {
+        border-radius: 40px;
+    }
+}
+
+// Section 3 css
+
+.section-3 {
+    .item {
+        max-width: 100%;
+
+        .service-image {
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 40px;
+            }
+
+            .services-body {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex !important;
+                align-items: flex-end !important;
+                margin-top: auto;
+                transform: translateY(245px);
+                transition: 0.5s;
+
+                p {
+                    font-size: 19.2px;
+                }
+            }
         }
     }
+}
 
-    .btn-secondary {
-        background-color: $secondary-color;
-        border: 1px solid $secondary-color;
-        font-size: 1em;
-        font-weight: 500;
-        text-transform: uppercase;
+.section-3 .item:hover .service-image .services-body {
+    transform: translateY(0);
+}
 
-        &:hover {
-            background-color: $primary-color;
-            border: 1px solid $primary-color;
+// Section 4 css
+
+.section-4 {
+    .cards-container {
+        .card {
+
+            height: 300px;
+            padding-right: calc(var(--bs-gutter-x) * 0.5);
+            padding-left: calc(var(--bs-gutter-x) * 0.5);
+            border: none;
+            outline: none;
+
+            .item {
+                background-color: white;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
         }
     }
 }
