@@ -20,7 +20,9 @@ import { tetimonials } from "./data";
 function App() {
     const [count, setCount] = useState(0);
 
-    const [tetimonialValue , setTestimonialValue] = useState(0);
+    const [tetimonialValue, setTestimonialValue] = useState(0);
+
+
 
     return (
         <>
@@ -423,16 +425,24 @@ function App() {
                         </span>
                         <h2> What people are saying about us</h2>
                         <p>
-                            We offer a diverse array of construction services, spanning residential, commercial, and industrial projects.
+                            We offer a diverse array of construction services,
+                            spanning residential, commercial, and industrial
+                            projects.
                         </p>
                     </div>
                     <div className="container row">
-                        {tetimonials.map((testimonial,i) => {
+                        {tetimonials.map((testimonial, i) => {
                             return (
-                                <div className={ i <= tetimonialValue + 2 ? " show col-md-4 p-4" : "hide col-md-4 p-4"}>
+                                <div
+                                    className={
+                                        i <= tetimonialValue + 2
+                                            ? " show col-md-4 p-4"
+                                            : "hide col-md-4 p-4"
+                                    }
+                                >
                                     <div className="item p-2 bg-white shadow"></div>
                                 </div>
-                            ) 
+                            );
                         })}
                     </div>
                 </div>
