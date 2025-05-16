@@ -10,12 +10,17 @@ import service1Img from "./assets/images/construction10.jpg";
 import service2Img from "./assets/images/construction122 (2).jpg";
 import service3Img from "./assets/images/construction3.jpg";
 import service4Img from "./assets/images/construction4.jpg";
-import icon1 from "./assets/images/icon-1.svg"
-import icon2 from "./assets/images/icon-2.svg"
-import icon3 from "./assets/images/icon-3.svg"
+import icon1 from "./assets/images/icon-1.svg";
+import icon2 from "./assets/images/icon-2.svg";
+import icon3 from "./assets/images/icon-3.svg";
+import project1 from "./assets/images/construction5.jpg";
+import project2 from "./assets/images/construction3.jpg";
+import { tetimonials } from "./data";
 
 function App() {
     const [count, setCount] = useState(0);
+
+    const [tetimonialValue , setTestimonialValue] = useState(0);
 
     return (
         <>
@@ -128,6 +133,7 @@ function App() {
                 </div>
 
                 {/* Services Section */}
+
                 <div className="section-3 py-5 bg-light d-flex flex-column align-items-center">
                     <div className="section-header text-center">
                         <span className="section-sub-heading">
@@ -271,6 +277,7 @@ function App() {
                 </div>
 
                 {/* Fact Section */}
+
                 <div className="section-4 py-5 d-flex flex-column align-items-center">
                     <div className="section-header text-center">
                         <span className="section-sub-heading">
@@ -280,8 +287,8 @@ function App() {
                         <p>
                             Created in close partnership with our clients and
                             collaborators, this approach merges industry
-                            expertise, <br /> decades of experience, innovation, and
-                            flexibility to consistently deliver excellence.
+                            expertise, <br /> decades of experience, innovation,
+                            and flexibility to consistently deliver excellence.
                         </p>
                     </div>
                     <div className="container row cards-container mt-4">
@@ -289,8 +296,15 @@ function App() {
                             <div className="item shadow px-4 d-flex align-items-center">
                                 <div>
                                     <img src={icon1} alt="" />
-                                    <h3 className="mt-2">Cutting-Edge Solutions</h3>
-                                    <p className="mt-3">Small actions create big impacts. It all begins and ends with each employee committing to safer work practices daily, ensuring they return home safely.</p>
+                                    <h3 className="mt-2">
+                                        Cutting-Edge Solutions
+                                    </h3>
+                                    <p className="mt-3">
+                                        Small actions create big impacts. It all
+                                        begins and ends with each employee
+                                        committing to safer work practices
+                                        daily, ensuring they return home safely.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -298,8 +312,15 @@ function App() {
                             <div className="item shadow px-4 d-flex align-items-center">
                                 <div>
                                     <img src={icon2} alt="" />
-                                    <h3 className="mt-2">Cutting-Edge Solutions</h3>
-                                    <p className="mt-3">Small actions create big impacts. It all begins and ends with each employee committing to safer work practices daily, ensuring they return home safely.</p>
+                                    <h3 className="mt-2">
+                                        Cutting-Edge Solutions
+                                    </h3>
+                                    <p className="mt-3">
+                                        Small actions create big impacts. It all
+                                        begins and ends with each employee
+                                        committing to safer work practices
+                                        daily, ensuring they return home safely.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -307,11 +328,112 @@ function App() {
                             <div className="item shadow px-4 d-flex align-items-center">
                                 <div>
                                     <img src={icon3} alt="" />
-                                    <h3 className="mt-2">Cutting-Edge Solutions</h3>
-                                    <p className="mt-3">Small actions create big impacts. It all begins and ends with each employee committing to safer work practices daily, ensuring they return home safely.</p>
+                                    <h3 className="mt-2">
+                                        Cutting-Edge Solutions
+                                    </h3>
+                                    <p className="mt-3">
+                                        Small actions create big impacts. It all
+                                        begins and ends with each employee
+                                        committing to safer work practices
+                                        daily, ensuring they return home safely.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* Projects Section */}
+
+                <div className="section-5 bg-light py-4 d-flex flex-column align-items-center">
+                    <div className="section-header text-center">
+                        <span className="section-sub-heading">
+                            our projects
+                        </span>
+                        <h2> Discover our diverse range of projects</h2>
+                        <p>
+                            We offer a diverse array of construction services,
+                            spanning residential, commercial, and industrial
+                            projects.
+                        </p>
+                    </div>
+                    <div className="container-fluid row text-white">
+                        <div className="col-md-3 ">
+                            <div className="item">
+                                <div className="project-image">
+                                    <img src={project1} alt="" />
+                                </div>
+                                <div className="project-content p-4 d-flex align-items-end">
+                                    <div>
+                                        <h3>Goa Project 2025</h3>
+                                        <p>
+                                            Specialty construction is a niche
+                                            sector within the construction
+                                            industry that focuses on projects
+                                            requiring specialized skills,
+                                            materials, and techniques
+                                        </p>
+                                        <a
+                                            class="btn btn-primary small"
+                                            href="/service/6"
+                                        >
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <div className="item">
+                                <div className="project-image">
+                                    <img src={project2} alt="" />
+                                </div>
+                                <div className="project-content  p-4 d-flex align-items-end">
+                                    <div>
+                                        <h3>Lucknow Project 2025</h3>
+                                        <p>
+                                            Specialty construction is crucial
+                                            for projects that require more than
+                                            just standard building practices.
+                                            Whether it's restoring a historic
+                                            landmark, designing a cutting-edge
+                                            research facility, or creating a
+                                            custom home with unique
+                                            architectural features
+                                        </p>
+                                        <a
+                                            class="btn btn-primary small"
+                                            href="/service/6"
+                                        >
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Testimonial Section */}
+
+                <div className="section-6 py-4 d-flex flex-column align-items-center">
+                    <div className="section-header text-center">
+                        <span className="section-sub-heading">
+                            Testimonials
+                        </span>
+                        <h2> What people are saying about us</h2>
+                        <p>
+                            We offer a diverse array of construction services, spanning residential, commercial, and industrial projects.
+                        </p>
+                    </div>
+                    <div className="container row">
+                        {tetimonials.map((testimonial,i) => {
+                            return (
+                                <div className={ i <= tetimonialValue + 2 ? " show col-md-4 p-4" : "hide col-md-4 p-4"}>
+                                    <div className="item p-2 bg-white shadow"></div>
+                                </div>
+                            ) 
+                        })}
                     </div>
                 </div>
             </main>
